@@ -17,6 +17,7 @@ export default function Player({ initialName, symbol, isActive }) {
 
   if (isEditing) {
     editablePlayerName = (
+      //? Two way binding is done here by setting the value of the input field to the playerName and then updating the playerName with the onChange event handler which is triggered when the input field value is changed. 
       <input type="text" required value={playerName} onChange={handleChange} />
     );
     buttonCaption = "Save";

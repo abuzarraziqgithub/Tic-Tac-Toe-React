@@ -1,3 +1,5 @@
+import { useState } from "react"
+
 const initialGameBoard =
 [
     [null,null,null],
@@ -5,22 +7,23 @@ const initialGameBoard =
     [null,null,null],
 ]
 
-export default function GameBoard({onSelectSquare, turns})
+export default function GameBoard({onSelectSquare})
 {
-    // const[gameBoard, setGameBoard] = useState(initialGameBoard)
+   const [gameBoard, setGameBoard] = useState(initialGameBoard)
 
-    // function handleSelectSquare(rowIndex, colIndex)
-    // {
-    //     setGameBoard((prevGameBoard)=>
-    //     {
-    //         const updatedBoard = [...prevGameBoard.map(innerArray => [...innerArray])];
-    //         updatedBoard[rowIndex][colIndex] = activePlayerSymbol;
-    //         return updatedBoard;
-    //     })
-
-    //     onSelectSquare();
-    // }
-
+   function handleSelectSquare(rowIndex, colIndex)
+   {
+    setGameBoard((prevGameBoard)=>
+    {
+        // We created a new array.
+        //  Spread operator is used to create a new array of arrays
+        //  The inner arrays are also copied using the spread operator
+        const updatedBoard = [...prevGameBoard.map(innerArray => [...innerArray])];
+        updatedBoard[rowIndex][colIndex]= 'X'
+        return updatedBoard;
+    })
+    // onSelectSquare()
+   }
 
 
     return(
@@ -34,7 +37,7 @@ export default function GameBoard({onSelectSquare, turns})
                         {row.map((playerSymbol, colIndex)=>
                         (
                             <li key={colIndex}>
-                                <button onClick={onSelectSquare}>{playerSymbol}</button>
+                                <button onClick={()=> handleSelectSquare(rowIndex, colIndex)}>{playerSymbol}</button>
                             </li>
                         ))}
                     </ol>
