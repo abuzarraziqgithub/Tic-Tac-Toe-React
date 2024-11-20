@@ -23,7 +23,7 @@ A modern, interactive Tic-Tac-Toe game built with React. This application featur
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/react-tic-tac-toe.git
+   git clone https://github.com/abuzarraziqgithub/react-tic-tac-toe.git
    ```
 
 2. Navigate to the project directory:
