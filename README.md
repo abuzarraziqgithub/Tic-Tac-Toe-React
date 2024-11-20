@@ -1,6 +1,6 @@
 # React Tic-Tac-Toe Game
 
-## Check out the Link : [Game_Link](https://abuzar-tic-tac-game.netlify.app/)
+## Check out the Link : [Tic-Tac-Toe](https://abuzar-tic-tac-game.netlify.app/)
 
 A modern, interactive Tic-Tac-Toe game built with React. This application features a dynamic game board, player name customization, and game state tracking.
 
